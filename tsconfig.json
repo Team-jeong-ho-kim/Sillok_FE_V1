@@ -1,0 +1,25 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compileOnSave": false,
+  "files": [],
+  "references": [
+    {
+      "path": "./apps/sillok-user"
+    },
+    {
+      "path": "./apps/sillok-admin"
+    },
+    {
+      "path": "./ui"
+    },
+    {
+      "path": "./libs/ui"
+    },
+    {
+      "path": "./libs/design-token"
+    },
+    {
+      "path": "./libs/hooks"
+    }
+  ]
+}
