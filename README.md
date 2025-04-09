@@ -1,42 +1,82 @@
-# 레포지토리 템플릿 사용 가이드
-이 레포지토리는 새 프로젝트를 빠르게 시작할 수 있도록 설계된 템플릿입니다. 이 템플릿에는 이슈 템플릿, PR 템플릿, 그리고 이슈 라벨이 미리 구성되어 있습니다.
+# Sillok
 
-### 템플릿 사용 방법
+<a alt="Nx logo" href="https://nx.dev" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="45"></a>
 
-1. GitHub에서 "Use this template" 버튼을 클릭하여 새 레포지토리를 생성합니다.
-2. 새 레포지토리의 이름과 설정을 선택합니다.
-3. 레포지토리가 생성되면 로컬 머신에 클론합니다.
+✨ Your new, shiny [Nx workspace](https://nx.dev) is almost ready ✨.
 
-### 포함된 템플릿
+[Learn more about this workspace setup and its capabilities](https://nx.dev/getting-started/tutorials/react-monorepo-tutorial?utm_source=nx_project&amp;utm_medium=readme&amp;utm_campaign=nx_projects) or run `npx nx graph` to visually explore what was created. Now, let's get you up to speed!
 
-#### 이슈 템플릿
-`.github/ISSUE_TEMPLATE/` 디렉토리에 다음 이슈 템플릿이 포함되어 있습니다:
+## Finish your CI setup
 
-- `bug_report.md`: 버그 리포트를 위한 템플릿
-- `feature_request.md`: 새 기능 요청을 위한 템플릿
+[Click here to finish setting up your workspace!](https://cloud.nx.app/connect/el2EVCYTAy)
 
-필요에 따라 이 템플릿들을 수정하거나 새 템플릿을 추가할 수 있습니다.
 
-#### PR 템플릿
-`.github/pull_request_template.md` 파일에 PR(Pull Request) 템플릿이 정의되어 있습니다. 이 템플릿은 PR을 생성할 때 자동으로 적용됩니다.
+## Run tasks
 
-### 이슈 라벨
-이슈 라벨은 깃허브 올가니제이션 기능에서 설정 가능합니다.
-라벨을 수정하거나 추가하려면:
+To run the dev server for your app, use:
 
-1. 대동여지도 올가니제이션에서 세팅을 클릭합니다.
-2. 왼쪽 사이드바에서 `Repository` -> `General` 탭으로 이동합니다.
-3. 아래로 스크롤해서 라벨의 기본세팅을 설정합니다.
+```sh
+npx nx serve sillok
+```
 
-### 커스터마이징
+To create a production bundle:
 
-1. 프로젝트에 맞게 README.md 파일을 수정하세요.
-2. 필요에 따라 이슈 템플릿, PR 템플릿, 라벨을 조정하세요.
-3. .gitignore 파일을 프로젝트의 요구사항에 맞게 업데이트하세요.
-4. 라이선스 파일을 확인하고 필요하다면 변경하세요.
+```sh
+npx nx build sillok
+```
 
-### 주의사항
+To see all available targets to run for a project, run:
 
-이 템플릿을 사용하여 생성된 레포지토리는 공개 레포지토리입니다. 비공개로 설정하려면 레포지토리 설정을 변경해야 합니다.
+```sh
+npx nx show project sillok
+```
 
-문제가 발생하거나 개선 사항이 있다면 이슈를 생성해 주세요. 이 템플릿이 여러분의 프로젝트에 도움이 되기를 바랍니다!
+These targets are either [inferred automatically](https://nx.dev/concepts/inferred-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) or defined in the `project.json` or `package.json` files.
+
+[More about running tasks in the docs &raquo;](https://nx.dev/features/run-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+
+## Add new projects
+
+While you could add new projects to your workspace manually, you might want to leverage [Nx plugins](https://nx.dev/concepts/nx-plugins?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) and their [code generation](https://nx.dev/features/generate-code?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) feature.
+
+Use the plugin's generator to create new projects.
+
+To generate a new application, use:
+
+```sh
+npx nx g @nx/react:app demo
+```
+
+To generate a new library, use:
+
+```sh
+npx nx g @nx/react:lib mylib
+```
+
+You can use `npx nx list` to get a list of installed plugins. Then, run `npx nx list <plugin-name>` to learn about more specific capabilities of a particular plugin. Alternatively, [install Nx Console](https://nx.dev/getting-started/editor-setup?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) to browse plugins and generators in your IDE.
+
+[Learn more about Nx plugins &raquo;](https://nx.dev/concepts/nx-plugins?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) | [Browse the plugin registry &raquo;](https://nx.dev/plugin-registry?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+
+
+[Learn more about Nx on CI](https://nx.dev/ci/intro/ci-with-nx#ready-get-started-with-your-provider?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+
+## Install Nx Console
+
+Nx Console is an editor extension that enriches your developer experience. It lets you run tasks, generate code, and improves code autocompletion in your IDE. It is available for VSCode and IntelliJ.
+
+[Install Nx Console &raquo;](https://nx.dev/getting-started/editor-setup?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+
+## Useful links
+
+Learn more:
+
+- [Learn more about this workspace setup](https://nx.dev/getting-started/tutorials/react-monorepo-tutorial?utm_source=nx_project&amp;utm_medium=readme&amp;utm_campaign=nx_projects)
+- [Learn about Nx on CI](https://nx.dev/ci/intro/ci-with-nx?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+- [Releasing Packages with Nx release](https://nx.dev/features/manage-releases?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+- [What are Nx plugins?](https://nx.dev/concepts/nx-plugins?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+
+And join the Nx community:
+- [Discord](https://go.nx.dev/community)
+- [Follow us on X](https://twitter.com/nxdevtools) or [LinkedIn](https://www.linkedin.com/company/nrwl)
+- [Our Youtube channel](https://www.youtube.com/@nxdevtools)
+- [Our blog](https://nx.dev/blog?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
