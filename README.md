@@ -8,7 +8,7 @@
 
 ## Finish your CI setup
 
-[Click here to finish setting up your workspace!](https://cloud.nx.app/connect/FGlaDGyPT0)
+[Click here to finish setting up your workspace!](https://cloud.nx.app/connect/el2EVCYTAy)
 
 
 ## Run tasks
@@ -16,19 +16,19 @@
 To run the dev server for your app, use:
 
 ```sh
-npx nx serve sillok-user
+npx nx serve sillok
 ```
 
 To create a production bundle:
 
 ```sh
-npx nx build sillok-user
+npx nx build sillok
 ```
 
 To see all available targets to run for a project, run:
 
 ```sh
-npx nx show project sillok-user
+npx nx show project sillok
 ```
 
 These targets are either [inferred automatically](https://nx.dev/concepts/inferred-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) or defined in the `project.json` or `package.json` files.

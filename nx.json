@@ -12,7 +12,7 @@
     ],
     "sharedGlobals": ["{workspaceRoot}/.github/workflows/ci.yml"]
   },
-  "nxCloudId": "67f5faf48846230f9e9f64df",
+  "nxCloudId": "67f623e48846230f9ea1f99f",
   "plugins": [
     {
       "plugin": "@nx/js/typescript",
@@ -60,11 +60,6 @@
       }
     }
   ],
-  "targetDefaults": {
-    "test": {
-      "dependsOn": ["^build"]
-    }
-  },
   "generators": {
     "@nx/react": {
       "application": {
@@ -79,7 +74,7 @@
       "library": {
         "style": "@emotion/styled",
         "linter": "eslint",
-        "unitTestRunner": "vitest"
+        "unitTestRunner": "none"
       }
     }
   }

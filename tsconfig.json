@@ -4,13 +4,10 @@
   "files": [],
   "references": [
     {
-      "path": "./apps/sillok-user"
-    },
-    {
       "path": "./apps/sillok-admin"
     },
     {
-      "path": "./ui"
+      "path": "./apps/sillok-user"
     },
     {
       "path": "./libs/ui"
